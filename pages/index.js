@@ -18,17 +18,18 @@ export default function Home({ post }) {
             backgroundColor: "black",
             zIndex: "999",
             position: "absolute",
-            top: "0px",
-            height: "100vh",
+            top: "0",
+            minHeight: "100vh",
+            overflow: "scroll",
           }}
         >
           <X
             onClick={() => setIsPost(false)}
             style={{ cursor: "pointer" }}
-            className={styles.button}
+            className={"mt-1 " + styles.button}
           />
           <div
-            className="p-3"
+            className="p-3 "
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           ></div>
         </div>
