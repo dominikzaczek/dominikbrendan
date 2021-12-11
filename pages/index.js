@@ -17,7 +17,7 @@ export default function Home({ post }) {
           style={{
             backgroundColor: "black",
             zIndex: "999",
-            position: "fixed",
+            position: "absolute",
             top: "0",
             minHeight: "100vh",
             overflow: "scroll",
