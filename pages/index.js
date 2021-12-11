@@ -17,7 +17,7 @@ export default function Home({ post }) {
           style={{
             backgroundColor: "black",
             zIndex: "999",
-            position: "absolute",
+            position: "fixed",
             top: "0",
             minHeight: "100vh",
             overflow: "scroll",
@@ -48,7 +48,7 @@ export default function Home({ post }) {
         </Head>
         <div className="row d-flex flex-direction-column">
           <img
-            src="https://dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png"
+            src="https://cms.dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png"
             className="img-fluid"
             alt="Dominik Brendan Logo"
             style={{ maxWidth: "500px" }}
@@ -79,7 +79,9 @@ export default function Home({ post }) {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const res = await fetch("https://dominikbrendan.com/wp-json/wp/v2/pages/862");
+  const res = await fetch(
+    "https://cms.dominikbrendan.com/wp-json/wp/v2/pages/862"
+  );
   const post = await res.json();
 
   // By returning { props: { posts } }, the Blog component
