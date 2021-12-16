@@ -80,7 +80,7 @@ export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
   const res = await fetch(
-    "https://cms.dominikbrendan.com/wp-json/wp/v2/pages/862"
+    "http://cms.dominikbrendan.com/wp-json/wp/v2/pages/862"
   );
   const post = await res.json();
 

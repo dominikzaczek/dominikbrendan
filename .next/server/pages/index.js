@@ -4,7 +4,7 @@ exports.id = 405;
 exports.ids = [405];
 exports.modules = {
 
-/***/ 168:
+/***/ 288:
 /***/ ((module) => {
 
 // Exports
@@ -48,7 +48,7 @@ var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(675);
 // EXTERNAL MODULE: ./styles/Home.module.css
-var Home_module = __webpack_require__(168);
+var Home_module = __webpack_require__(288);
 var Home_module_default = /*#__PURE__*/__webpack_require__.n(Home_module);
 ;// CONCATENATED MODULE: external "react-feather"
 const external_react_feather_namespaceObject = require("react-feather");
@@ -69,7 +69,7 @@ function Home({ post  }) {
                 style: {
                     backgroundColor: "black",
                     zIndex: "999",
-                    position: "fixed",
+                    position: "absolute",
                     top: "0",
                     minHeight: "100vh",
                     overflow: "scroll"
@@ -116,7 +116,7 @@ function Home({ post  }) {
                         className: "row d-flex flex-direction-column",
                         children: [
                             /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                src: "https://cms.dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png",
+                                src: "http://cms.dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png",
                                 className: "img-fluid",
                                 alt: "Dominik Brendan Logo",
                                 style: {
@@ -161,7 +161,7 @@ function Home({ post  }) {
 async function getStaticProps() {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
-    const res = await fetch("https://cms.dominikbrendan.com/wp-json/wp/v2/pages/862");
+    const res = await fetch("http://cms.dominikbrendan.com/wp-json/wp/v2/pages/862");
     const post = await res.json();
     // By returning { props: { posts } }, the Blog component
     // will receive `posts` as a prop at build time
