@@ -48,7 +48,7 @@ export default function Home({ post }) {
         </Head>
         <div className="row d-flex flex-direction-column">
           <img
-            src="https://cms.dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png"
+            src="http://cms.dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png"
             className="img-fluid"
             alt="Dominik Brendan Logo"
             style={{ maxWidth: "500px" }}
