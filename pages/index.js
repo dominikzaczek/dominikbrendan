@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import { Instagram, X } from "react-feather";
+import Newsletter from "./components/newsletter";
 
 export default function Home({ post }) {
   const [isPost, setIsPost] = React.useState(false);
@@ -35,8 +36,12 @@ export default function Home({ post }) {
         </div>
       ) : null}
       <div
-        className="container d-flex justify-content-center align-items-center"
-        style={{ height: "100vh" }}
+        className="container align-items-center"
+        style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
       >
         <Head>
           <title>Dominik Brendan</title>
@@ -46,7 +51,14 @@ export default function Home({ post }) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="row d-flex flex-direction-column">
+        <div
+          className="row"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginTop: "40vh",
+          }}
+        >
           <img
             src="https://hungry-driscoll.77-68-115-165.plesk.page/wp-content/uploads/2022/02/logo-1.png"
             className="img-fluid"
@@ -69,6 +81,25 @@ export default function Home({ post }) {
             >
               What am I doing now?
             </h2>
+          </div>
+          <h4
+            id="newsletter-button"
+            style={{ fontWeight: "lighter", cursor: "pointer" }}
+            onClick={() => {
+              document
+                .querySelector("#newsletter-button")
+                .setAttribute("hidden", "true");
+              document.querySelector("#newsletter").removeAttribute("hidden");
+            }}
+          >
+            Sign up to my newsletter &rarr;
+          </h4>
+          <div
+            id="newsletter"
+            className="animate__animated animate__fade"
+            hidden
+          >
+            <Newsletter />
           </div>
         </div>
       </div>

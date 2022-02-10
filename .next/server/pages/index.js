@@ -1,7 +1,7 @@
 (() => {
 var exports = {};
 exports.id = 405;
-exports.ids = [405];
+exports.ids = [405,201];
 exports.modules = {
 
 /***/ 288:
@@ -52,7 +52,10 @@ var Home_module = __webpack_require__(288);
 var Home_module_default = /*#__PURE__*/__webpack_require__.n(Home_module);
 ;// CONCATENATED MODULE: external "react-feather"
 const external_react_feather_namespaceObject = require("react-feather");
+// EXTERNAL MODULE: ./pages/components/newsletter.js
+var newsletter = __webpack_require__(422);
 ;// CONCATENATED MODULE: ./pages/index.js
+
 
 
 
@@ -92,9 +95,11 @@ function Home({ post  }) {
                 ]
             }) : null,
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: "container d-flex justify-content-center align-items-center",
+                className: "container align-items-center",
                 style: {
-                    height: "100vh"
+                    height: "100vh",
+                    display: "flex",
+                    flexDirection: "column"
                 },
                 children: [
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
@@ -113,7 +118,12 @@ function Home({ post  }) {
                         ]
                     }),
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                        className: "row d-flex flex-direction-column",
+                        className: "row",
+                        style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            marginTop: "40vh"
+                        },
                         children: [
                             /*#__PURE__*/ jsx_runtime_.jsx("img", {
                                 src: "https://hungry-driscoll.77-68-115-165.plesk.page/wp-content/uploads/2022/02/logo-1.png",
@@ -150,6 +160,25 @@ function Home({ post  }) {
                                         children: "What am I doing now?"
                                     })
                                 ]
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("h4", {
+                                id: "newsletter-button",
+                                style: {
+                                    fontWeight: "lighter",
+                                    cursor: "pointer"
+                                },
+                                onClick: ()=>{
+                                    document.querySelector("#newsletter-button").setAttribute("hidden", "true");
+                                    document.querySelector("#newsletter").removeAttribute("hidden");
+                                },
+                                children: "Sign up to my newsletter →"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                id: "newsletter",
+                                className: "animate__animated animate__fade",
+                                hidden: true,
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(newsletter["default"], {
+                                })
                             })
                         ]
                     })
@@ -222,7 +251,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [675], () => (__webpack_exec__(393)));
+var __webpack_exports__ = __webpack_require__.X(0, [675,422], () => (__webpack_exec__(393)));
 module.exports = __webpack_exports__;
 
 })();
