@@ -116,7 +116,7 @@ function Home({ post  }) {
                         className: "row d-flex flex-direction-column",
                         children: [
                             /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                src: "http://cms.dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png",
+                                src: "https://hungry-driscoll.77-68-115-165.plesk.page/wp-content/uploads/2022/02/logo-1.png",
                                 className: "img-fluid",
                                 alt: "Dominik Brendan Logo",
                                 style: {
@@ -161,7 +161,7 @@ function Home({ post  }) {
 async function getStaticProps() {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
-    const res = await fetch("http://cms.dominikbrendan.com/wp-json/wp/v2/pages/862");
+    const res = await fetch("https://hungry-driscoll.77-68-115-165.plesk.page/index.php/wp-json/wp/v2/pages/12");
     const post = await res.json();
     // By returning { props: { posts } }, the Blog component
     // will receive `posts` as a prop at build time

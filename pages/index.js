@@ -48,7 +48,7 @@ export default function Home({ post }) {
         </Head>
         <div className="row d-flex flex-direction-column">
           <img
-            src="http://cms.dominikbrendan.com/wp-content/uploads/2019/10/logo-1.png"
+            src="https://hungry-driscoll.77-68-115-165.plesk.page/wp-content/uploads/2022/02/logo-1.png"
             className="img-fluid"
             alt="Dominik Brendan Logo"
             style={{ maxWidth: "500px" }}
@@ -80,7 +80,7 @@ export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
   const res = await fetch(
-    "http://cms.dominikbrendan.com/wp-json/wp/v2/pages/862"
+    "https://hungry-driscoll.77-68-115-165.plesk.page/index.php/wp-json/wp/v2/pages/12"
   );
   const post = await res.json();
 
