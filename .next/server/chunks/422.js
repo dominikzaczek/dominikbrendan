@@ -43,7 +43,7 @@ const Newsletter = ()=>{
     };
     if (sent) return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: !message ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h4", {
-            className: "animate__animated animate__flash",
+            className: "animate__animated animate__flash animate__infinite infinite",
             children: "Give me a second!"
         }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h4", {
             className: "animate__animated animate__fadeIn",

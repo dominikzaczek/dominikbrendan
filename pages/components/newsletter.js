@@ -31,7 +31,7 @@ const Newsletter = () => {
     return (
       <>
         {!message ? (
-          <h4 className="animate__animated animate__flash">
+          <h4 className="animate__animated animate__flash animate__infinite	infinite">
             Give me a second!
           </h4>
         ) : (
